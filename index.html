@@ -23,16 +23,17 @@
   --text:#E9F0F4; --text-dim:#93A9B9; --amber:#F2B33C;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
 body{
   background:var(--stahl-900);
   color:var(--text);
   font-family:'Inter',system-ui,sans-serif;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
-img{max-width:100%}
+img{max-width:100%;height:auto}
+.fuss a{overflow-wrap:anywhere}
 .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
 
 /* Kopfleiste */
