@@ -95,7 +95,7 @@ section.block{padding:52px 0;border-top:1px solid var(--linie)}
 .zeile{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .zeile.gedreht{grid-template-columns:.95fr 1.05fr}
 .zeile .bilder{display:flex;gap:16px;justify-content:center}
-.zeile .bilder .handy{width:212px}
+.zeile .bilder .handy{flex:1 1 0;max-width:212px;min-width:0}
 .zeile ul{list-style:none;margin-top:16px;display:grid;gap:10px}
 .zeile ul li{padding-left:26px;position:relative;color:var(--text-dim);font-size:.94rem}
 .zeile ul li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--tuerkis-hell),var(--tuerkis) 70%);box-shadow:0 0 0 3px rgba(31,191,173,.15)}
@@ -131,9 +131,17 @@ footer{border-top:1px solid var(--linie);padding:28px 0 40px;margin-top:24px}
 .fuss .re{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:.74rem}
 
 a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radius:4px}
+@media (max-width:560px){
+  .kopf nav{gap:12px}
+  .kopf nav a{font-size:.8rem}
+  .kopf nav a.nur-gross{display:none}
+}
 
 @media (max-width:820px){
   .hero{grid-template-columns:1fr;padding:40px 0 26px;gap:32px}
+  .schild{padding:22px 18px}
+  .schild dl{font-size:.74rem;gap:6px 10px}
+  .schild dd{overflow-wrap:anywhere}
   .merkmale{grid-template-columns:1fr}
   .zeile,.zeile.gedreht{grid-template-columns:1fr}
   .zeile .bilder{order:2}
@@ -153,8 +161,8 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
       <a href="#schulung">Training</a>
       <a href="#warum">Why</a>
       <a href="#fahrplan">Roadmap</a>
-      <a href="datenschutz.html#english">Privacy</a>
-      <a href="impressum.html">Imprint</a>
+      <a class="nur-gross" href="datenschutz.html#english">Privacy</a>
+      <a class="nur-gross" href="impressum.html">Imprint</a>
       <a href="index.html" lang="de" style="font-family:'IBM Plex Mono',monospace">DE</a>
     </nav>
   </div>
@@ -180,7 +188,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
       <dl>
         <dt>Manufacturer</dt><dd>Mendura Digital, Mannheim (DE)</dd>
         <dt>Type</dt><dd>CMMS · Android</dd>
-        <dt>Manages</dt><dd>Machines &amp; vehicles (plates, VIN)</dd>
+        <dt>Manages</dt><dd>Machines &amp; vehicles</dd>
         <dt>Built</dt><dd>2026</dd>
         <dt>Operating mode</dt><dd class="ok">Offline-first · On-premises</dd>
         <dt>Sync</dt><dd>Device-to-device on the local network</dd>
@@ -240,7 +248,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
         <div class="karte">
           <div class="mono">Assets &amp; plans</div>
           <h3>Everything in one place</h3>
-          <p>Machines and vehicles with a file, QR code and maintenance plans by time or operating hours. The app flags due work on its own.</p>
+          <p>Machines and vehicles (with plate and VIN) plus a file, QR code and maintenance plans by time or operating hours. The app flags due work on its own.</p>
         </div>
         <div class="karte">
           <div class="mono">Faults &amp; orders</div>
