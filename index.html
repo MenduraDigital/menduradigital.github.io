@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mendura CMMS – Instandhaltung, die offline funktioniert</title>
+<meta name="description" content="Mendura CMMS ist die offline-first Instandhaltungs-App für kleine und mittlere Betriebe: Anlagen, Wartungspläne, Störungen und Arbeitsaufträge – ohne Cloud, Daten bleiben im Betrieb. Mit Schraubi-Schulung und Team-Rangliste.">
+<link rel="canonical" href="https://menduradigital.de/">
+<meta property="og:title" content="Mendura CMMS – Instandhaltung, die offline funktioniert">
+<meta property="og:description" content="Anlagen, Wartungspläne, Störungen und Arbeitsaufträge – ohne Cloud. Die Einarbeitung übernimmt Schraubi.">
+<meta property="og:image" content="https://menduradigital.de/s1_heute.webp">
+<link rel="icon" href="https://github.com/MenduraDigital.png?size=64">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600;125,700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stahl-900:#0D1822; --stahl-800:#132330; --stahl-700:#1B3145;
+  --linie:#28425A; --tuerkis:#1FBFAD; --tuerkis-hell:#7BE0D4;
+  --text:#E9F0F4; --text-dim:#93A9B9; --amber:#F2B33C;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--stahl-900);
+  color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+/* Kopfleiste */
+header{border-bottom:1px solid var(--linie);position:sticky;top:0;background:rgba(13,24,34,.92);backdrop-filter:blur(8px);z-index:20}
+.kopf{display:flex;align-items:center;gap:12px;padding:13px 0}
+.kopf img{width:36px;height:36px;border-radius:9px}
+.kopf .marke{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:.04em;white-space:nowrap}
+.kopf .marke span{color:var(--tuerkis)}
+.kopf nav{margin-left:auto;display:flex;gap:16px;overflow-x:auto}
+.kopf nav a{color:var(--text-dim);text-decoration:none;font-size:.85rem;white-space:nowrap}
+.kopf nav a:hover,.kopf nav a:focus-visible{color:var(--tuerkis-hell)}
+
+/* Hero */
+.hero{padding:56px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.hero h1{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.12}
+.hero h1 em{font-style:normal;color:var(--tuerkis)}
+.hero p.lead{margin-top:18px;color:var(--text-dim);font-size:1.02rem;max-width:44ch}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:26px;border:1px solid var(--linie);border-radius:999px;padding:9px 16px;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--tuerkis-hell);background:var(--stahl-800)}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber);animation:puls 2.2s ease-in-out infinite}
+@keyframes puls{0%,100%{opacity:.45}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.badge::before{animation:none}}
+
+/* Typenschild */
+.schild{background:linear-gradient(160deg,var(--stahl-700),var(--stahl-800));border:1px solid var(--linie);border-radius:14px;padding:26px 24px;position:relative;box-shadow:0 18px 50px rgba(0,0,0,.42);font-family:'IBM Plex Mono',monospace}
+.schild::before,.schild::after,.schild .niete-l,.schild .niete-r{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5E7A92,#22384C 70%);box-shadow:inset 0 -1px 2px rgba(0,0,0,.6)}
+.schild::before{top:10px;left:10px}
+.schild::after{top:10px;right:10px}
+.schild .niete-l{bottom:10px;left:10px}
+.schild .niete-r{bottom:10px;right:10px}
+.schild .kopfzeile{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--linie);padding-bottom:14px;margin-bottom:14px}
+.schild .kopfzeile img{width:44px;height:44px;border-radius:10px}
+.schild .kopfzeile .t1{font-size:.95rem;font-weight:500;letter-spacing:.06em}
+.schild .kopfzeile .t2{font-size:.72rem;color:var(--text-dim)}
+.schild dl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:.79rem}
+.schild dt{color:var(--text-dim)}
+.schild dd{color:var(--text)}
+.schild dd.ok{color:var(--tuerkis)}
+
+/* Abschnitte */
+section.block{padding:52px 0;border-top:1px solid var(--linie)}
+.block h2{font-family:'Archivo',sans-serif;font-weight:600;font-size:clamp(1.3rem,3vw,1.6rem);margin-bottom:10px}
+.block .sub{color:var(--text-dim);max-width:62ch;margin-bottom:28px}
+.mono-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--tuerkis);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:8px}
+
+/* Galerie */
+.galerie{display:flex;gap:18px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.galerie::-webkit-scrollbar{height:8px}
+.galerie::-webkit-scrollbar-thumb{background:var(--linie);border-radius:99px}
+.handy{flex:0 0 auto;width:228px;scroll-snap-align:start}
+.rahmen{background:#0A121A;border:1px solid var(--linie);border-radius:26px;padding:9px;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.rahmen img{display:block;width:100%;border-radius:18px}
+.handy figcaption{margin-top:10px;font-size:.82rem;color:var(--text-dim);text-align:center;line-height:1.4}
+
+/* Merkmale */
+.merkmale{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.karte{background:var(--stahl-800);border:1px solid var(--linie);border-radius:12px;padding:20px}
+.karte .mono{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--tuerkis);letter-spacing:.08em;text-transform:uppercase}
+.karte h3{font-size:1rem;font-weight:600;margin:8px 0 6px}
+.karte p{font-size:.88rem;color:var(--text-dim)}
+
+/* Bild-Text-Zeilen (Schraubi, Rangliste) */
+.zeile{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.zeile.gedreht{grid-template-columns:.95fr 1.05fr}
+.zeile .bilder{display:flex;gap:16px;justify-content:center}
+.zeile .bilder .handy{width:212px}
+.zeile ul{list-style:none;margin-top:16px;display:grid;gap:10px}
+.zeile ul li{padding-left:26px;position:relative;color:var(--text-dim);font-size:.94rem}
+.zeile ul li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--tuerkis-hell),var(--tuerkis) 70%);box-shadow:0 0 0 3px rgba(31,191,173,.15)}
+.zeile ul li strong{color:var(--text)}
+
+/* Gründer */
+.gruender{background:var(--stahl-800);border:1px solid var(--linie);border-radius:16px;padding:30px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+.gruender-foto{width:150px}
+.gruender-foto img{width:150px;height:150px;object-fit:cover;border-radius:14px;border:1px solid var(--linie)}
+.gruender-foto .rolle{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--text-dim);margin-top:10px;text-align:center;line-height:1.5}
+.gruender p{color:var(--text-dim);font-size:.95rem;margin-bottom:14px}
+.gruender p strong{color:var(--text)}
+.gruender .unterschrift{font-family:'Archivo',sans-serif;font-weight:600;color:var(--text);margin-top:4px}
+.gruender .unterschrift small{display:block;font-family:'Inter',sans-serif;font-weight:400;color:var(--text-dim);font-size:.82rem}
+
+/* Fahrplan */
+.fahrplan{display:grid;gap:0;position:relative;margin-top:6px}
+.schritt{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:18px 0;position:relative}
+.schritt:not(:last-child)::before{content:"";position:absolute;left:21px;top:56px;bottom:-6px;width:2px;background:var(--linie)}
+.punkt{width:44px;height:44px;border-radius:50%;border:1px solid var(--linie);background:var(--stahl-800);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--text-dim)}
+.schritt.aktiv .punkt{border-color:var(--tuerkis);color:var(--tuerkis);box-shadow:0 0 0 4px rgba(31,191,173,.12)}
+.schritt h3{font-size:1rem;font-weight:600}
+.schritt p{font-size:.9rem;color:var(--text-dim);max-width:58ch}
+.play-knopf{display:inline-flex;align-items:center;gap:10px;margin-top:12px;background:var(--stahl-800);border:1px solid var(--tuerkis);border-radius:10px;padding:10px 18px;color:var(--tuerkis-hell);text-decoration:none;font-size:.9rem;font-weight:500}
+.play-knopf svg{width:20px;height:20px;fill:var(--tuerkis)}
+.play-knopf .klein{display:block;font-size:.68rem;color:var(--text-dim);font-weight:400}
+
+/* Fuss */
+footer{border-top:1px solid var(--linie);padding:28px 0 40px;margin-top:24px}
+.fuss{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-size:.84rem;color:var(--text-dim)}
+.fuss a{color:var(--text-dim);text-decoration:none;border-bottom:1px solid var(--linie)}
+.fuss a:hover,.fuss a:focus-visible{color:var(--tuerkis-hell);border-color:var(--tuerkis)}
+.fuss .re{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:.74rem}
+
+a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radius:4px}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;padding:40px 0 26px;gap:32px}
+  .merkmale{grid-template-columns:1fr}
+  .zeile,.zeile.gedreht{grid-template-columns:1fr}
+  .zeile .bilder{order:2}
+  .gruender{grid-template-columns:1fr}
+  .gruender-foto{margin:0 auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap kopf">
+    <img src="https://github.com/MenduraDigital.png?size=128" alt="Mendura Digital Logo">
+    <div class="marke">MENDURA<span> DIGITAL</span></div>
+    <nav>
+      <a href="#bilder">App</a>
+      <a href="#schulung">Schulung</a>
+      <a href="#warum">Warum</a>
+      <a href="#fahrplan">Fahrplan</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <h1>Instandhaltung, die <em>offline</em> funktioniert.</h1>
+      <p class="lead">Mendura CMMS bringt Anlagen, Wartungspläne, Störungen und Arbeitsaufträge auf das Smartphone – ohne Cloud, ohne fremde Server. Die Daten bleiben im Betrieb.</p>
+      <div class="badge">BALD BEI GOOGLE PLAY</div>
+    </div>
+
+    <div class="schild" aria-label="Typenschild von Mendura CMMS">
+      <i class="niete-l"></i><i class="niete-r"></i>
+      <div class="kopfzeile">
+        <img src="https://github.com/MenduraDigital.png?size=128" alt="">
+        <div>
+          <div class="t1">MENDURA CMMS</div>
+          <div class="t2">Typenschild · Instandhaltungssystem</div>
+        </div>
+      </div>
+      <dl>
+        <dt>Hersteller</dt><dd>Mendura Digital, Mannheim</dd>
+        <dt>Typ</dt><dd>CMMS · Android</dd>
+        <dt>Baujahr</dt><dd>2026</dd>
+        <dt>Betriebsart</dt><dd class="ok">Offline-first · On-Premises</dd>
+        <dt>Abgleich</dt><dd>Gerät-zu-Gerät im lokalen Netz</dd>
+        <dt>Einarbeitung</dt><dd class="ok">Integriert (Schraubi-Schulung)</dd>
+        <dt>Sprachen</dt><dd>DE · EN · FR · ES · IT · RU · UK · ZH</dd>
+      </dl>
+    </div>
+  </div>
+
+  <section class="block" id="bilder">
+    <div class="wrap">
+      <span class="mono-eyebrow">Die App in Bildern</span>
+      <h2>Vom fälligen Ölwechsel bis zum fertigen Bericht</h2>
+      <p class="sub">Echte Abläufe aus der Werkstatt: melden, planen, abarbeiten, nachweisen – alles auf dem Gerät in der Hosentasche.</p>
+      <div class="galerie">
+        <figure class="handy">
+          <div class="rahmen"><img src="s1_heute.webp" alt="Startbildschirm mit fälligen Wartungen" loading="lazy"></div>
+          <figcaption>Heute-Ansicht: fällige und überfällige Arbeiten auf einen Blick</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s3_pruefpunkte.webp" alt="Wartungsaufgabe mit Prüfpunkten und Messwerten" loading="lazy"></div>
+          <figcaption>Prüfpunkte mit Messwerten, Einheiten und Sollbereich</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s4_auftrag.webp" alt="Arbeitsauftrag mit Prüfpunkten und Zeiterfassung" loading="lazy"></div>
+          <figcaption>Arbeitskarte: Zeiten, Pflicht-Prüfpunkte, Ersatzteile</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s5_stoerung.webp" alt="Störungsmeldung Kühlmittelpumpe" loading="lazy"></div>
+          <figcaption>Störung melden – und direkt den Arbeitsauftrag daraus erstellen</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s2_qr.webp" alt="QR-Code einer Maschine zum Ausdrucken" loading="lazy"></div>
+          <figcaption>QR-Code an die Maschine kleben – scannen öffnet die Akte</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s6_lager.webp" alt="Ersatzteillager mit Mindestbestandswarnung" loading="lazy"></div>
+          <figcaption>Ersatzteillager warnt unter Mindestbestand</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s7_pdf.webp" alt="PDF-Bericht eines Arbeitsauftrags" loading="lazy"></div>
+          <figcaption>PDF-Nachweis per Knopfdruck – für Audit und Ablage</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s1_heute_dark.webp" alt="Startbildschirm im Dark Mode" loading="lazy"></div>
+          <figcaption>Auf Wunsch im Dark Mode – angenehm in der Halle</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <span class="mono-eyebrow">Kernpunkte</span>
+      <h2>Für Betriebe, die heute noch mit Zetteln arbeiten</h2>
+      <div class="merkmale" style="margin-top:24px">
+        <div class="karte">
+          <div class="mono">Anlagen &amp; Pläne</div>
+          <h3>Alles an einem Ort</h3>
+          <p>Maschinen und Fahrzeuge mit Akte, QR-Code, Wartungsplänen nach Zeit oder Betriebsstunden – fällige Arbeiten meldet die App von selbst.</p>
+        </div>
+        <div class="karte">
+          <div class="mono">Störungen &amp; Aufträge</div>
+          <h3>Vom Fehler zum Nachweis</h3>
+          <p>Störungen melden, Arbeitsaufträge mit Prüfpunkten abarbeiten, Ersatzteile buchen, per PDF-Bericht dokumentieren – lückenlos und beweisfähig.</p>
+        </div>
+        <div class="karte">
+          <div class="mono">Ohne Cloud</div>
+          <h3>Daten bleiben bei Ihnen</h3>
+          <p>Kein Konto bei uns, keine fremden Server. Geräte gleichen sich direkt im lokalen Netzwerk ab, signiert und verschlüsselt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="schulung">
+    <div class="wrap zeile">
+      <div>
+        <span class="mono-eyebrow">Alleinstellungsmerkmal 1</span>
+        <h2>Einarbeitung? Übernimmt Schraubi.</h2>
+        <p class="sub" style="margin-bottom:0">Kein Schulungstag, kein Handbuch, niemand muss danebensitzen: Mendura bringt seinen eigenen Trainer mit. Das Zahnrad-Maskottchen Schraubi führt jede Person Schritt für Schritt durch die App – direkt an echten Abläufen, nicht auf Folien.</p>
+        <ul>
+          <li><strong>9 Kapitel, nach Rollen getrennt:</strong> Mitarbeiter lernen Melden, Warten und Abarbeiten – Planer und Administratoren ihre eigenen Kapitel.</li>
+          <li><strong>Echte Übungen:</strong> Störung melden, Wartung durchführen, Auftrag abschließen – Schraubi markiert die richtige Stelle auf dem Bildschirm.</li>
+          <li><strong>Mit Verständnisprüfung:</strong> Fortschritt und Abschlüsse werden pro Person festgehalten – der Meister sieht, wer fit ist.</li>
+        </ul>
+      </div>
+      <div class="bilder">
+        <figure class="handy">
+          <div class="rahmen"><img src="s8_schraubi.webp" alt="Schraubi erklärt einen Schulungsschritt" loading="lazy"></div>
+          <figcaption>Schraubi erklärt – direkt in der App</figcaption>
+        </figure>
+        <figure class="handy">
+          <div class="rahmen"><img src="s10_schulung.webp" alt="Übersicht der Schulungskapitel mit Fortschritt" loading="lazy"></div>
+          <figcaption>Schulungszentrum mit Kapiteln und Fortschritt</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="rangliste">
+    <div class="wrap zeile gedreht">
+      <div class="bilder">
+        <figure class="handy">
+          <div class="rahmen"><img src="s9_rangliste.webp" alt="Team-Rangliste mit Punkten und Medaillen" loading="lazy"></div>
+          <figcaption>Punkte für erledigte Arbeit – wer führt diese Woche?</figcaption>
+        </figure>
+      </div>
+      <div>
+        <span class="mono-eyebrow">Alleinstellungsmerkmal 2</span>
+        <h2>Wartung, die Spaß macht</h2>
+        <p class="sub" style="margin-bottom:0">Die beste App nützt nichts, wenn das Team sie nicht mitträgt. Deshalb belohnt Mendura erledigte Arbeit mit Punkten – und macht aus der lästigen Pflicht einen kleinen sportlichen Wettbewerb.</p>
+        <ul>
+          <li><strong>Punkte für echte Arbeit:</strong> Inspektionen, Wartungen, Instandsetzungen und gemeldete Störungen zahlen auf das eigene Konto ein.</li>
+          <li><strong>Rangliste fürs Team:</strong> Medaillen, Ränge und Wochenwertung – dranbleiben lohnt sich.</li>
+          <li><strong>Sichtbarkeit für die Führung:</strong> Der Meister sieht schwarz auf weiß, wer zuverlässig dokumentiert. Motivation unten, Überblick oben.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="warum">
+    <div class="wrap">
+      <span class="mono-eyebrow">Warum Mendura</span>
+      <h2>Aus der Werkstatt, nicht vom Reißbrett</h2>
+      <div class="gruender" style="margin-top:24px">
+        <div class="gruender-foto" hidden>
+          <img src="foto_alexander.jpg" alt="Alexander Ushakov an einer Werkzeugmaschine"
+               onload="this.closest('.gruender-foto').hidden=false">
+          <div class="rolle">Industriemeister ·<br>Ausbilder &amp; IHK-Prüfer</div>
+        </div>
+        <div>
+          <p>Ich bin Industriemeister Metall und hauptberuflich Ausbilder und Dozent – von Hydraulik, Pneumatik und SPS-Technik über die manuelle und maschinelle Bearbeitung metallischer Werkstoffe bis zur Kunststofftechnik. Daneben erstelle ich technische Zeichnungen in CAD und bin IHK-Prüfer, unter anderem für angehende Industriemeister.</p>
+          <p>Bei uns im Betrieb gab es, was in vielen Werkstätten Alltag ist: <strong>störungsbedingte Instandhaltung</strong>. Gewartet wurde erst, wenn eine Maschine wirklich stand. Und natürlich stand sie im dümmsten Moment – kurz vor Prüfungstagen, wenn jede Maschine gebraucht wird. Dann hieß es: unter Stress reparieren und hektisch Ersatzteile bestellen.</p>
+          <p>Dabei ist die Lösung lange bekannt: <strong>vorbeugende Instandhaltung</strong> mit einem sauberen Wartungsplan. Sie verlängert die Lebensdauer der Maschinen und erspart genau diese Feuerwehreinsätze. Was fehlte, war ein Werkzeug dafür, das kein Konzern-IT-Projekt voraussetzt.</p>
+          <p>Angefangen hat Mendura klein: Als 3D-Druck-Hobbyist wollte ich zuerst nur eine Wartungs-App für meinen eigenen Drucker. Daraus wurde die Erkenntnis, dass genau so ein Werkzeug auch Betrieben hilft, die heute noch mit Zetteln oder Excel arbeiten.</p>
+          <p>Deshalb ist Mendura so gebaut, wie ich es selbst einsetzen würde: läuft komplett offline, die Daten bleiben im Betrieb, kein Konto, keine Cloud – und so einfach, dass jeder im Team ohne Schulungstag damit arbeiten kann. Die Einarbeitung übernimmt Schraubi, direkt in der App.</p>
+          <div class="unterschrift">Alexander Ushakov<small>Gründer, Mendura Digital</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="fahrplan">
+    <div class="wrap">
+      <span class="mono-eyebrow">Fahrplan</span>
+      <h2>Was kommt – und was schon läuft</h2>
+      <div class="fahrplan">
+        <div class="schritt aktiv">
+          <div class="punkt">01</div>
+          <div>
+            <h3>Android-App · Start bei Google Play</h3>
+            <p>Die Unternehmens-Version für Android steht kurz vor der Veröffentlichung – weltweit, in acht Sprachen, mit 30 Tagen zum Ausprobieren.</p>
+            <a class="play-knopf" href="#" aria-disabled="true" onclick="return false">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.5v17c0 .6.7 1 1.2.7l14.6-8.5c.5-.3.5-1.1 0-1.4L5.2 2.8C4.7 2.5 4 2.9 4 3.5z"/></svg>
+              <span>Bald bei Google Play<span class="klein">Veröffentlichung in Vorbereitung</span></span>
+            </a>
+          </div>
+        </div>
+        <div class="schritt">
+          <div class="punkt">02</div>
+          <div>
+            <h3>Aktive Weiterentwicklung</h3>
+            <p>Mendura ist kein fertig abgestelltes Produkt: Die App wird laufend gepflegt und wächst mit regelmäßigen Updates – Verbesserungen aus der Praxis fließen direkt ein.</p>
+          </div>
+        </div>
+        <div class="schritt">
+          <div class="punkt">03</div>
+          <div>
+            <h3>PC-Zentrale für größere Teams</h3>
+            <p>Als nächster Ausbau folgt die Pro-Version mit PC-Server als dauerhafte Zentrale im Betrieb – die Smartphones koppeln sich als Clients. Auch hier gilt: alles bleibt im eigenen Netz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fuss">
+    <a href="datenschutz.html">Datenschutzerklärung</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="mailto:contact.menduradigital@gmail.com">Kontakt</a>
+    <div class="re">© 2026 Mendura Digital</div>
+  </div>
+</footer>
+
+</body>
+</html>
