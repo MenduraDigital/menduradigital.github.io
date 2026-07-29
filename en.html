@@ -23,14 +23,14 @@
   --text:#E9F0F4; --text-dim:#93A9B9; --amber:#F2B33C;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   background:var(--stahl-900);
   color:var(--text);
   font-family:'Inter',system-ui,sans-serif;
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
-  overflow-x:clip;
+  overflow-x:hidden;
 }
 img{max-width:100%;height:auto}
 .fuss a{overflow-wrap:anywhere}
@@ -150,7 +150,8 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
   .schild dd{overflow-wrap:anywhere}
   .merkmale{grid-template-columns:1fr}
   .zeile,.zeile.gedreht{grid-template-columns:1fr}
-  .zeile .bilder{order:2}
+  .zeile .bilder{order:2;flex-direction:column;align-items:center;gap:22px}
+  .zeile .bilder .handy{flex:none;width:min(250px,72vw);max-width:250px}
   .gruender{grid-template-columns:1fr}
   .gruender-foto{margin:0 auto}
 }
