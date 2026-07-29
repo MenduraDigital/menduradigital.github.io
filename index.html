@@ -23,7 +23,7 @@
   --text:#E9F0F4; --text-dim:#93A9B9; --amber:#F2B33C;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   background:var(--stahl-900);
   color:var(--text);
@@ -140,6 +140,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 }
 
 @media (max-width:820px){
+  .wrap{padding:0 22px}
   .hero{grid-template-columns:1fr;padding:40px 0 26px;gap:32px}
   .schild{padding:22px 18px}
   .schild dl{font-size:.74rem;gap:6px 10px}
@@ -306,7 +307,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
         <ul>
           <li><strong>Punkte für echte Arbeit:</strong> Inspektionen, Wartungen, Instandsetzungen und gemeldete Störungen zahlen auf das eigene Konto ein.</li>
           <li><strong>Rangliste fürs Team:</strong> Medaillen, Ränge und Wochenwertung. Dranbleiben lohnt sich.</li>
-          <li><strong>Sichtbarkeit für die Führung:</strong> Der Meister sieht schwarz auf weiß, wer zuverlässig dokumentiert. Motivation unten, Überblick oben.</li>
+          <li><strong>Sichtbarkeit für die Führung:</strong> Der Meister sieht schwarz auf weiß, wer zuverlässig dokumentiert. So bleibt das Team motiviert und die Führung behält den Überblick.</li>
         </ul>
       </div>
     </div>

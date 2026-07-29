@@ -23,7 +23,7 @@
   --text:#E9F0F4; --text-dim:#93A9B9; --amber:#F2B33C;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{
   background:var(--stahl-900);
   color:var(--text);
@@ -140,6 +140,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 }
 
 @media (max-width:820px){
+  .wrap{padding:0 22px}
   .hero{grid-template-columns:1fr;padding:40px 0 26px;gap:32px}
   .schild{padding:22px 18px}
   .schild dl{font-size:.74rem;gap:6px 10px}
@@ -306,7 +307,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
         <ul>
           <li><strong>Points for real work:</strong> inspections, maintenance, repairs and reported faults all add to your personal score.</li>
           <li><strong>A leaderboard for the team:</strong> medals, ranks and a weekly score. Staying on it pays off.</li>
-          <li><strong>Visibility for management:</strong> the foreman sees in black and white who documents reliably. Motivation below, overview above.</li>
+          <li><strong>Visibility for management:</strong> the foreman sees in black and white who documents reliably. The team stays motivated while management keeps the overview.</li>
         </ul>
       </div>
     </div>
