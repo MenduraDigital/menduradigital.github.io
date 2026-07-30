@@ -175,3 +175,12 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 .karte .mehr:hover{border-color:var(--tuerkis)}
 .edition .knopf{display:inline-block;margin-top:14px;background:var(--stahl-700);border:1px solid var(--tuerkis);border-radius:10px;padding:10px 18px;color:var(--tuerkis-hell);text-decoration:none;font-size:.9rem;font-weight:500}
 .edition .knopf:hover{background:var(--stahl-900)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;margin-top:24px;max-width:820px}
+.faq details{background:var(--stahl-800);border:1px solid var(--linie);border-radius:12px}
+.faq summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--tuerkis);font-family:'IBM Plex Mono',monospace;font-size:1.15rem;flex:none}
+.faq details[open] summary::after{content:"\2013"}
+.faq .antwort{padding:0 18px 16px;color:var(--text-dim);font-size:.92rem}
