@@ -13,6 +13,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <changefreq>weekly</changefreq><priority>0.9</priority>
   </url>
+  <url><loc>https://menduradigital.de/cmms.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://menduradigital.de/home.html</loc><priority>0.6</priority></url>
+  <url><loc>https://menduradigital.de/ueber.html</loc><priority>0.5</priority></url>
   <url><loc>https://menduradigital.de/datenschutz.html</loc><priority>0.3</priority></url>
   <url><loc>https://menduradigital.de/impressum.html</loc><priority>0.3</priority></url>
 </urlset>
