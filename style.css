@@ -23,7 +23,7 @@ header{border-bottom:1px solid var(--linie);position:sticky;top:0;background:rgb
 .kopf img{width:36px;height:36px;border-radius:9px}
 .kopf .marke{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:.04em;white-space:nowrap}
 .kopf .marke span{color:var(--tuerkis)}
-.kopf nav{margin-left:auto;display:flex;gap:16px;overflow-x:auto}
+.kopf nav{margin-left:auto;display:flex;gap:18px;align-items:center;overflow:visible}
 .kopf nav a{color:var(--text-dim);text-decoration:none;font-size:.85rem;white-space:nowrap}
 .kopf nav a:hover,.kopf nav a:focus-visible{color:var(--tuerkis-hell)}
 
@@ -143,7 +143,8 @@ footer{border-top:1px solid var(--linie);padding:28px 0 40px;margin-top:24px}
 
 a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radius:4px}
 @media (max-width:560px){
-  .kopf nav{gap:11px}
+  .kopf nav{gap:11px;overflow-x:auto;scrollbar-width:none}
+  .kopf nav::-webkit-scrollbar{display:none}
   .kopf nav a{font-size:.8rem}
   .kopf nav a.nur-gross{display:none}
   .kopf .marke span{display:none}
@@ -186,8 +187,10 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 .faq .antwort{padding:0 18px 16px;color:var(--text-dim);font-size:.92rem}
 
 /* Feinschliff */
-.kopf nav a.aktiv{color:var(--tuerkis-hell);position:relative}
-.kopf nav a.aktiv::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--tuerkis);border-radius:2px}
+.kopf nav a{position:relative;padding:8px 1px}
+.kopf nav a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--tuerkis);border-radius:2px;transition:right .18s ease}
+.kopf nav a:hover::after,.kopf nav a:focus-visible::after,.kopf nav a.aktiv::after{right:0}
+.kopf nav a.aktiv{color:var(--tuerkis-hell)}
 .produkt-menue{min-width:250px;padding:10px}
 .produkt-menue a{display:flex;flex-direction:column;gap:2px;border-left:2px solid transparent}
 .produkt-menue a:hover,.produkt-menue a:focus-visible{border-left-color:var(--tuerkis)}
