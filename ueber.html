@@ -31,7 +31,7 @@
       <a href="index.html">Start</a>
       <a href="cmms.html">CMMS</a>
       <a href="home.html">Home</a>
-      <a class="nur-gross" href="ueber.html">Über mich</a>
+      <a class="nur-gross aktiv" href="ueber.html">Über mich</a>
     </nav>
   </div>
 </header>
@@ -75,5 +75,12 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('click', function(e){
+  document.querySelectorAll('details.produkt[open]').forEach(function(d){
+    if(!d.contains(e.target)) d.removeAttribute('open');
+  });
+});
+</script>
 </body>
 </html>

@@ -184,3 +184,17 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 .faq summary::after{content:"+";color:var(--tuerkis);font-family:'IBM Plex Mono',monospace;font-size:1.15rem;flex:none}
 .faq details[open] summary::after{content:"\2013"}
 .faq .antwort{padding:0 18px 16px;color:var(--text-dim);font-size:.92rem}
+
+/* Feinschliff */
+.kopf nav a.aktiv{color:var(--tuerkis-hell);position:relative}
+.kopf nav a.aktiv::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--tuerkis);border-radius:2px}
+.produkt-menue{min-width:250px;padding:10px}
+.produkt-menue a{display:flex;flex-direction:column;gap:2px;border-left:2px solid transparent}
+.produkt-menue a:hover,.produkt-menue a:focus-visible{border-left-color:var(--tuerkis)}
+.edition ul.haken{list-style:none;display:grid;gap:7px;margin:0 0 16px}
+.edition ul.haken li{font-size:.85rem;color:var(--text-dim);padding-left:20px;position:relative}
+.edition ul.haken li::before{content:"\2713";position:absolute;left:0;color:var(--tuerkis)}
+.edition .knopf{margin-top:auto;align-self:flex-start}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;max-width:760px}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--text-dim);border:1px solid var(--linie);border-radius:999px;padding:7px 14px;background:var(--stahl-800)}
+.chip.an{color:var(--tuerkis-hell);border-color:var(--tuerkis)}

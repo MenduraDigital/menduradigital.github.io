@@ -34,7 +34,7 @@
       </div>
     </details>
     <nav>
-      <a href="index.html">Start</a>
+      <a class="aktiv" href="index.html">Start</a>
       <a href="cmms.html">CMMS</a>
       <a href="home.html">Home</a>
       <a class="nur-gross" href="ueber.html">Über mich</a>
@@ -74,20 +74,31 @@
   <section class="block" id="produkte">
     <div class="wrap">
       <span class="mono-eyebrow">Produkte</span>
-      <h2>Für den Betrieb – und für zu Hause</h2>
+      <h2>Für den Betrieb und für zu Hause</h2>
       <div class="editionen">
         <div class="edition haupt">
           <div class="tag">Für Betriebe · Start bei Google Play</div>
           <h3>Mendura CMMS</h3>
           <div class="preis">19,99 € / Monat · 199 € / Jahr<small>eine Lizenz pro Betrieb, alle Geräte · 30 Tage gratis testen</small></div>
-          <p>Die komplette Instandhaltung fürs Team: Anlagen, Fahrzeuge, Wartungspläne, Störungen, Aufträge, Lager – mit Schraubi-Schulung und Team-Rangliste.</p>
+          <p>Die komplette Instandhaltung fürs Team, von der Anlagenakte bis zum PDF-Nachweis.</p>
+          <ul class="haken">
+            <li>Anlagen, Fahrzeuge, Wartungspläne, Störungen, Aufträge, Lager</li>
+            <li>Einarbeitung durch die Schraubi-Schulung</li>
+            <li>Team-Rangliste und Punktesystem</li>
+            <li>Unbegrenzt viele Geräte im Betrieb</li>
+          </ul>
           <a class="knopf" href="cmms.html">Mendura CMMS entdecken</a>
         </div>
         <div class="edition">
           <div class="tag">Für zu Hause · in Planung</div>
           <h3>Mendura Home</h3>
           <div class="preis">Einmaliger Kaufpreis<small>kein Abo</small></div>
-          <p>Die schlanke Version für Hobbybastler und den ganzen Haushalt: 3D-Drucker, Werkzeug, Auto, Heizung. Bewusst einfach, ohne Team-Funktionen.</p>
+          <p>Die schlanke Version für Hobbybastler und den ganzen Haushalt.</p>
+          <ul class="haken">
+            <li>Geräteakten mit Wartungsplänen und Historie</li>
+            <li>Erinnerungen, wenn etwas fällig ist</li>
+            <li>Bewusst einfach, ohne Team-Funktionen</li>
+          </ul>
           <a class="knopf" href="home.html">Mehr zu Mendura Home</a>
         </div>
       </div>
@@ -170,5 +181,12 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('click', function(e){
+  document.querySelectorAll('details.produkt[open]').forEach(function(d){
+    if(!d.contains(e.target)) d.removeAttribute('open');
+  });
+});
+</script>
 </body>
 </html>

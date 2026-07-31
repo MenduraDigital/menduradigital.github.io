@@ -30,18 +30,62 @@
     <nav>
       <a href="index.html">Start</a>
       <a href="cmms.html">CMMS</a>
-      <a href="home.html">Home</a>
+      <a class="aktiv" href="home.html">Home</a>
       <a class="nur-gross" href="ueber.html">Über mich</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="wrap seitenkopf">
-    <span class="mono-eyebrow">Für zu Hause · in Planung</span>
-    <h1>Mendura <em>Home</em></h1>
-    <p class="lead">Ich bin Hobbybastler: Bei mir zu Hause laufen 3D-Drucker, Werkzeug und ständig irgendein Projekt. Angefangen hat Mendura mit dem Wartungsplan für meinen eigenen Drucker. Mendura Home bringt genau das für den ganzen Haushalt: ein schlanker Wartungsplaner für alles, was läuft, schneidet, druckt und fährt. Vom Drucker über das Auto bis zur Heizung.</p>
+  <div class="wrap hero" style="padding-bottom:16px">
+    <div>
+      <span class="mono-eyebrow">Für zu Hause · in Planung</span>
+      <h1 style="margin-top:8px">Mendura <em>Home</em></h1>
+      <p class="lead">Ich bin Hobbybastler: Bei mir zu Hause laufen 3D-Drucker, Werkzeug und ständig irgendein Projekt. Angefangen hat Mendura mit dem Wartungsplan für meinen eigenen Drucker. Mendura Home bringt genau das für den ganzen Haushalt: ein schlanker Wartungsplaner für alles, was läuft, schneidet, druckt und fährt.</p>
+    </div>
+    <div class="schild" aria-label="Typenschild von Mendura Home">
+      <i class="niete-l"></i><i class="niete-r"></i>
+      <div class="kopfzeile">
+        <img src="https://github.com/MenduraDigital.png?size=128" alt="">
+        <div>
+          <div class="t1">MENDURA HOME</div>
+          <div class="t2">Typenschild · Hauswartung</div>
+        </div>
+      </div>
+      <dl>
+        <dt>Einsatz</dt><dd>Haushalt &amp; Hobbywerkstatt</dd>
+        <dt>Verwaltet</dt><dd>Alle Geräte mit Akte &amp; QR</dd>
+        <dt>Betriebsart</dt><dd class="ok">Offline · ohne Konto</dd>
+        <dt>Preis</dt><dd class="ok">Einmaliger Kauf, kein Abo</dd>
+        <dt>Herkunft</dt><dd>Die Idee, mit der Mendura begann</dd>
+        <dt>Status</dt><dd style="color:var(--amber)">In Planung</dd>
+      </dl>
+    </div>
   </div>
+
+  <section class="block">
+    <div class="wrap">
+      <span class="mono-eyebrow">Passt zu allem, was gewartet werden will</span>
+      <h2>Ein Zuhause voller Technik</h2>
+      <div class="chips">
+        <span class="chip an">3D-Drucker</span>
+        <span class="chip">Auto</span>
+        <span class="chip">Motorrad</span>
+        <span class="chip">E-Bike</span>
+        <span class="chip">Heizung</span>
+        <span class="chip an">CNC &amp; Fräse</span>
+        <span class="chip">Drehbank</span>
+        <span class="chip">Kompressor</span>
+        <span class="chip">Rasenmäher</span>
+        <span class="chip">Wärmepumpe</span>
+        <span class="chip an">Lötstation</span>
+        <span class="chip">Aquarium</span>
+        <span class="chip">Pool</span>
+        <span class="chip">Wohnmobil</span>
+        <span class="chip">…und dein nächstes Projekt</span>
+      </div>
+    </div>
+  </section>
 
   <section class="block">
     <div class="wrap">
@@ -92,5 +136,12 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('click', function(e){
+  document.querySelectorAll('details.produkt[open]').forEach(function(d){
+    if(!d.contains(e.target)) d.removeAttribute('open');
+  });
+});
+</script>
 </body>
 </html>
