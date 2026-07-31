@@ -174,8 +174,8 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 .edition.solo{max-width:480px}
 .karte .mehr{display:inline-block;margin-top:10px;color:var(--tuerkis-hell);text-decoration:none;font-size:.86rem;border-bottom:1px solid var(--linie)}
 .karte .mehr:hover{border-color:var(--tuerkis)}
-.edition .knopf{display:inline-block;margin-top:14px;background:var(--stahl-700);border:1px solid var(--tuerkis);border-radius:10px;padding:10px 18px;color:var(--tuerkis-hell);text-decoration:none;font-size:.9rem;font-weight:500}
-.edition .knopf:hover{background:var(--stahl-900)}
+.knopf{display:inline-block;background:var(--stahl-700);border:1px solid var(--tuerkis);border-radius:10px;padding:10px 18px;color:var(--tuerkis-hell);text-decoration:none;font-size:.9rem;font-weight:500}
+.knopf:hover{background:var(--stahl-900)}
 
 /* FAQ */
 .faq{display:grid;gap:10px;margin-top:24px;max-width:820px}
@@ -201,3 +201,8 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;max-width:760px}
 .chip{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--text-dim);border:1px solid var(--linie);border-radius:999px;padding:7px 14px;background:var(--stahl-800)}
 .chip.an{color:var(--tuerkis-hell);border-color:var(--tuerkis)}
+
+/* Audit-Feinschliff */
+.gruender h3.abschnitt{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tuerkis);margin:20px 0 4px}
+.gruender h3.abschnitt:first-child{margin-top:0}
+.wisch-hinweis{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--text-dim);text-align:center;margin-top:2px;letter-spacing:.08em}
