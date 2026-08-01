@@ -8,7 +8,13 @@
 <link rel="canonical" href="https://menduradigital.de/">
 <link rel="alternate" hreflang="de" href="https://menduradigital.de/">
 <link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html">
-<link rel="alternate" hreflang="x-default" href="https://menduradigital.de/">
+<link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html">
+<link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html">
+<link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html">
+<link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html">
+<link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html">
+<link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html">
+<link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html">
 <meta property="og:title" content="Mendura Digital – Software, die im Betrieb bleibt">
 <meta property="og:description" content="Wartungssoftware ohne Cloud: Mendura CMMS für Betriebe, Mendura Home für zu Hause.">
 <meta property="og:image" content="https://menduradigital.de/s1_heute.webp">
@@ -57,7 +63,19 @@
       <a href="cmms.html">CMMS</a>
       <a href="home.html">Home</a>
       <a class="nur-gross" href="ueber.html">Über mich</a>
-      <a href="en.html" lang="en" style="font-family:'IBM Plex Mono',monospace">EN</a>
+      <details class="sprache">
+      <summary aria-label="Language"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.8 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3z"/></svg><span>DE</span></summary>
+      <div class="sprache-menue">
+        <a class="aktiv" href="index.html" hreflang="de" lang="de">Deutsch<span class="code">DE</span></a>
+        <a href="en.html" hreflang="en" lang="en">English<span class="code">EN</span></a>
+        <a href="fr.html" hreflang="fr" lang="fr">Français<span class="code">FR</span></a>
+        <a href="es.html" hreflang="es" lang="es">Español<span class="code">ES</span></a>
+        <a href="it.html" hreflang="it" lang="it">Italiano<span class="code">IT</span></a>
+        <a href="ru.html" hreflang="ru" lang="ru">Русский<span class="code">RU</span></a>
+        <a href="uk.html" hreflang="uk" lang="uk">Українська<span class="code">UK</span></a>
+        <a href="zh.html" hreflang="zh" lang="zh">中文<span class="code">ZH</span></a>
+      </div>
+    </details>
     </nav>
   </div>
 </header>
@@ -202,7 +220,7 @@
 
 <script>
 document.addEventListener('click', function(e){
-  document.querySelectorAll('details.produkt[open]').forEach(function(d){
+  document.querySelectorAll('header details[open]').forEach(function(d){
     if(!d.contains(e.target)) d.removeAttribute('open');
   });
 });

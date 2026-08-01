@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://menduradigital.de/</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,8 +18,99 @@
     <loc>https://menduradigital.de/en.html</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://menduradigital.de/fr.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menduradigital.de/es.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menduradigital.de/it.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menduradigital.de/ru.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menduradigital.de/uk.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://menduradigital.de/zh.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://menduradigital.de/es.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://menduradigital.de/it.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://menduradigital.de/ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://menduradigital.de/uk.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://menduradigital.de/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://menduradigital.de/en.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://menduradigital.de/cmms.html</loc>
