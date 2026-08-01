@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About – Alexander Ushakov, Mendura Digital</title>
+<meta name="description" content="Certified industrial foreman, trainer and IHK examiner. Why I build maintenance software without the cloud: from the workshop, not the drawing board.">
+<link rel="canonical" href="https://menduradigital.de/ueber-en.html">
+<link rel="alternate" hreflang="de" href="https://menduradigital.de/ueber.html">
+<link rel="alternate" hreflang="en" href="https://menduradigital.de/ueber-en.html">
+<meta property="og:title" content="About – Alexander Ushakov, Mendura Digital">
+<meta property="og:description" content="Certified industrial foreman, trainer and IHK examiner. Why I build maintenance software without the cloud.">
+<link rel="icon" href="https://github.com/MenduraDigital.png?size=64">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600;125,700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap kopf">
+    <details class="produkt">
+      <summary>
+        <img src="https://github.com/MenduraDigital.png?size=128" alt="Mendura Digital logo">
+        <span class="marke">MENDURA<span> DIGITAL</span></span>
+        <i class="caret" aria-hidden="true"></i>
+      </summary>
+      <div class="produkt-menue">
+        <a href="cmms-en.html">Mendura CMMS<small>For businesses · coming to Google Play</small></a>
+        <a href="home-en.html">Mendura Home<small>For your home · planned</small></a>
+      </div>
+    </details>
+    <nav>
+      <a href="en.html">Home</a>
+      <a href="cmms-en.html">CMMS</a>
+      <a href="home-en.html">Mendura Home</a>
+      <a class="nur-gross aktiv" href="ueber-en.html">About</a>
+      <a class="nur-gross" href="ueber.html" lang="de" style="font-family:'IBM Plex Mono',monospace">DE</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap seitenkopf">
+    <span class="mono-eyebrow">About</span>
+    <h1>From the workshop, not the drawing board</h1>
+  </div>
+
+  <section class="block" style="border-top:0;padding-top:32px">
+    <div class="wrap">
+      <div class="gruender">
+        <div class="gruender-foto" hidden>
+          <img src="foto_alexander.jpg" alt="Alexander Ushakov, founder of Mendura Digital"
+               onload="this.closest('.gruender-foto').hidden=false">
+          <div class="rolle">Industrial foreman ·<br>Trainer &amp; IHK examiner</div>
+        </div>
+        <div>
+          <h3 class="abschnitt">Professional background</h3>
+          <p>I am a certified industrial foreman for metalworking (Geprüfter Industriemeister Metall) and work full time as a trainer: I teach skilled workers in pneumatics and PLC technology as well as manual and machine processing of metals and plastics. Alongside that I organise day-to-day operations, produce technical drawings in CAD and serve as an examiner for the German Chamber of Commerce (IHK), including for future industrial foremen.</p>
+
+          <h3 class="abschnitt">The problem, straight from practice</h3>
+          <p>Our own workshop had what is everyday reality in many places: <strong>breakdown-driven maintenance</strong>. Machines were serviced only once they had actually stopped. And of course they stopped at the worst possible moment, right before examination days, when every machine is needed. What followed was repairs under pressure and frantic last-minute orders for spare parts.</p>
+          <p>The remedy has been known for decades: <strong>preventive maintenance</strong> with a proper maintenance plan. It extends the life of your machines and spares you exactly those firefighting sessions. What was missing was a tool that does not require a corporate IT project.</p>
+
+          <h3 class="abschnitt">How Mendura came about</h3>
+          <p>Mendura started small. As a 3D printing hobbyist I first wanted nothing more than a maintenance app for my own printer. That grew into the realisation that the same tool helps businesses which still run on paper or spreadsheets today.</p>
+          <p>So Mendura is built the way I would want to use it myself: fully offline, data staying inside the company, no account, no cloud. And simple enough that everyone on the team can work with it without a training day, because Schraubi handles the onboarding right inside the app.</p>
+          <p>Mendura Digital is deliberately small: development, further development and support are all in one pair of hands. If you write, you get an answer from the developer himself, and requests from the shop floor flow straight into the planning.</p>
+          <div class="unterschrift">Alexander Ushakov<small>Founder, Mendura Digital</small></div>
+          <p style="margin-top:18px"><a class="knopf" href="cmms-en.html">Take a look at Mendura CMMS</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fuss">
+    <a href="cmms-en.html">Mendura CMMS</a>
+    <a href="home-en.html">Mendura Home</a>
+    <a href="ueber-en.html">About</a>
+    <a href="datenschutz.html#english">Privacy</a>
+    <a href="impressum.html">Imprint</a>
+    <a href="mailto:contact.menduradigital@gmail.com">Contact</a>
+    <div class="re">© 2026 Mendura Digital</div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e){
+  document.querySelectorAll('details.produkt[open]').forEach(function(d){
+    if(!d.contains(e.target)) d.removeAttribute('open');
+  });
+});
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "518144f28cd345e6bc37aebcf6f0dd49"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
