@@ -23,7 +23,9 @@ header{border-bottom:1px solid var(--linie);position:sticky;top:0;background:rgb
 .kopf img{width:36px;height:36px;border-radius:9px}
 .kopf .marke{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:.04em;white-space:nowrap}
 .kopf .marke span{color:var(--tuerkis)}
-.kopf nav{margin-left:auto;display:flex;gap:18px;align-items:center;overflow:visible}
+/* CLS-Schutz: Navigation reserviert ihre Breite, damit der Schriftwechsel
+   die rechtsbuendige Leiste nicht verschiebt (Core Web Vitals, 10.09.2026) */
+.kopf nav{margin-left:auto;display:flex;gap:18px;align-items:center;overflow:visible;font-size-adjust:0.52}
 .kopf nav a{color:var(--text-dim);text-decoration:none;font-size:.85rem;white-space:nowrap}
 .kopf nav a:hover,.kopf nav a:focus-visible{color:var(--tuerkis-hell)}
 
@@ -222,3 +224,7 @@ a:focus-visible{outline:2px solid var(--tuerkis);outline-offset:3px;border-radiu
 @media (max-width:560px){
   .sprache-menue{position:fixed;left:12px;right:12px;top:64px;min-width:0}
 }
+
+.gplay{display:inline-block;line-height:0}
+.gplay img{display:block;border-radius:8px}
+.gplay:hover{opacity:.9}
