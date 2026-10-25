@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://menduradigital.de/</loc>
+    <loc>https://menduradigital.de/</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -14,7 +14,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/en.html</loc>
+    <loc>https://menduradigital.de/en.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -27,7 +27,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/fr.html</loc>
+    <loc>https://menduradigital.de/fr.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -40,7 +40,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/es.html</loc>
+    <loc>https://menduradigital.de/es.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -53,7 +53,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/it.html</loc>
+    <loc>https://menduradigital.de/it.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -66,7 +66,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/ru.html</loc>
+    <loc>https://menduradigital.de/ru.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -79,7 +79,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/uk.html</loc>
+    <loc>https://menduradigital.de/uk.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -92,7 +92,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/zh.html</loc>
+    <loc>https://menduradigital.de/zh.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/fr.html"/>
@@ -105,7 +105,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms.html</loc>
+    <loc>https://menduradigital.de/cmms.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -118,7 +118,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-en.html</loc>
+    <loc>https://menduradigital.de/cmms-en.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -131,7 +131,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-fr.html</loc>
+    <loc>https://menduradigital.de/cmms-fr.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -144,7 +144,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-es.html</loc>
+    <loc>https://menduradigital.de/cmms-es.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -157,7 +157,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-it.html</loc>
+    <loc>https://menduradigital.de/cmms-it.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -170,7 +170,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-ru.html</loc>
+    <loc>https://menduradigital.de/cmms-ru.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -183,7 +183,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-uk.html</loc>
+    <loc>https://menduradigital.de/cmms-uk.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -196,7 +196,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/cmms-zh.html</loc>
+    <loc>https://menduradigital.de/cmms-zh.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/cmms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/cmms-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/cmms-fr.html"/>
@@ -209,7 +209,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home.html</loc>
+    <loc>https://menduradigital.de/home.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -221,7 +221,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-en.html</loc>
+    <loc>https://menduradigital.de/home-en.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -233,7 +233,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-fr.html</loc>
+    <loc>https://menduradigital.de/home-fr.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -245,7 +245,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-es.html</loc>
+    <loc>https://menduradigital.de/home-es.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -257,7 +257,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-it.html</loc>
+    <loc>https://menduradigital.de/home-it.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -269,7 +269,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-ru.html</loc>
+    <loc>https://menduradigital.de/home-ru.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -281,7 +281,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-uk.html</loc>
+    <loc>https://menduradigital.de/home-uk.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -293,7 +293,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/home-zh.html</loc>
+    <loc>https://menduradigital.de/home-zh.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/home.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/home-en.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://menduradigital.de/home-fr.html"/>
@@ -305,17 +305,17 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/ueber.html</loc>
+    <loc>https://menduradigital.de/ueber.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/ueber.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/ueber-en.html"/>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://menduradigital.de/ueber-en.html</loc>
+    <loc>https://menduradigital.de/ueber-en.html</loc><lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://menduradigital.de/ueber.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://menduradigital.de/ueber-en.html"/>
     <priority>0.5</priority>
   </url>
-  <url><loc>https://menduradigital.de/datenschutz.html</loc><priority>0.3</priority></url>
-  <url><loc>https://menduradigital.de/impressum.html</loc><priority>0.3</priority></url>
+  <url><loc>https://menduradigital.de/datenschutz.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
+  <url><loc>https://menduradigital.de/impressum.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
 </urlset>
