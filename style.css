@@ -127,8 +127,8 @@ section.block{padding:52px 0;border-top:1px solid var(--linie)}
 /* Fahrplan */
 .fahrplan{display:grid;gap:0;position:relative;margin-top:6px}
 .schritt{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:18px 0;position:relative}
-.schritt:not(:last-child)::before{content:"";position:absolute;left:21px;top:56px;bottom:-6px;width:2px;background:var(--linie)}
-.punkt{width:44px;height:44px;border-radius:50%;border:1px solid var(--linie);background:var(--stahl-800);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--text-dim)}
+.schritt:not(:last-child)::before{content:"";position:absolute;left:21px;top:40px;bottom:-40px;width:2px;background:var(--linie)}
+.punkt{position:relative;z-index:1;width:44px;height:44px;border-radius:50%;border:1px solid var(--linie);background:var(--stahl-800);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--text-dim)}
 .schritt.aktiv .punkt{border-color:var(--tuerkis);color:var(--tuerkis);box-shadow:0 0 0 4px rgba(31,191,173,.12)}
 .schritt h3{font-size:1rem;font-weight:600}
 .schritt p{font-size:.9rem;color:var(--text-dim);max-width:58ch}
